@@ -1,4 +1,4 @@
-public abstract class Transport {
+public abstract class Transport implements TransportService{
     private final int wheelsCount;
     private final String modelName;
 
@@ -7,20 +7,22 @@ public abstract class Transport {
         this.wheelsCount = wheelsCount;
     }
 
-    public String getModelName() {
-        return modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
     }
 
-    public void updateTyre() {
+    public String getModelName() {
+        return modelName;
     }
-    public void checkEngine() {
-    }
-    public void checkTrailer() {
 
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
     }
+
+    @Override
+    public void service() {
+        updateTyre();
+    }
+
 
 }

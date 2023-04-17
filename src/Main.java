@@ -28,6 +28,5 @@ public class Main {
         getRetreat();
         station.check(bicycle2);
         getRetreat();
-        getRetreat();
     }
 }
