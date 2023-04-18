@@ -3,8 +3,9 @@ public class Car extends TransportWithEngine {
         super(modelName, wheelsCount);
     }
 
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель машины");
+    @Override
+    public void service() {
+        super.service();
     }
 }
 

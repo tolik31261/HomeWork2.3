@@ -21,7 +21,9 @@ public abstract class Transport implements TransportService{
 
     @Override
     public void service() {
-        updateTyre();
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
+        }
     }
 
 
